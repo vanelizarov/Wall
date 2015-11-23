@@ -1,14 +1,17 @@
 <%= stylesheet_link_tag 'application', 'http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css' %>
 
-<div class="header">All Posts</div>
-<%= link_to new_post_path do %><div class="new_post">+</div><% end %>
+<hr class="separator"></hr>
+
+<div class="header">
+    <div class="header_title">WALL</div>
+    <%= link_to new_post_path do %><div class="new_post_button">+</div><% end %>
+</div>
+
+<hr class="separator"></hr>
 
 <!--<table>-->
     <% @posts.each do |post| %>
         <!--<tr>-->
-
-
-
         <div class="post_container">
             <div class="post_content">
 
@@ -19,9 +22,9 @@
 
             <div class="post_actions">
 
-                <%= link_to edit_post_path(post) do %><div class="post_edit">Edit</div><% end %>
-                <%= link_to post_path(post), method: :delete, data: { confirm: 'Are you sure?' } do %><div class="post_delete">Del.</div><% end %>
                 <%= link_to post_path(post) do %><div class="post_show">Show</div><% end %>
+                <%= link_to edit_post_path(post) do %><div class="post_edit">Edit</div><% end %>
+                <%= link_to post_path(post), method: :delete, data: { confirm: 'Are you sure?' } do %><div class="post_delete">Delete</div><% end %>
 
             </div>
         </div>
