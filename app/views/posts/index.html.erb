@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag 'application', 'http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css' %>
+
+<div class="header">All Posts</div>
+<%= link_to new_post_path do %><div class="new_post">+</div><% end %>
+
+<!--<table>-->
+    <% @posts.each do |post| %>
+        <!--<tr>-->
+
+
+
+        <div class="post_container">
+            <div class="post_content">
+
+                <div class="post_title"><%= post.title %></div> <!-- class="post_content"-->
+                <div class="post_text"><%= post.text %></div> <!-- class="post_content"-->
+
+            </div>
+
+            <div class="post_actions">
+
+                <%= link_to edit_post_path(post) do %><div class="post_edit">Edit</div><% end %>
+                <%= link_to post_path(post), method: :delete, data: { confirm: 'Are you sure?' } do %><div class="post_delete">Del.</div><% end %>
+                <%= link_to post_path(post) do %><div class="post_show">Show</div><% end %>
+
+            </div>
+        </div>
+
+
+        <!--</tr>-->
+    <% end %>
+<!--</table>-->
+
+<!--<%= link_to 'Back', posts_path %>-->
