@@ -5,12 +5,12 @@
   <div class="post_container">
       <div class="post_content">
           <div class="post_title"><%= f.label :title %></div>
-          <div class="post_text_form"><%= f.text_field :title %></div>
+          <div class="post_text_form"><%= f.text_field :title, :class => 'form_input_field' %></div>
       </div>
       <div style="margin: 0px 0px 20px;"></div>
       <div class="post_content">
           <div class="post_title"><%= f.label :text %></div>
-          <div class="post_text_form"><%= f.text_area :text, cols: "23", rows: "20" %></div>
+          <div class="post_text_form"><%= f.text_area :text, rows: "20", :class => 'form_input_area' %></div>
       </div>
       <div style="margin: 0px 0px 20px;"></div>
       <div class="post_content">

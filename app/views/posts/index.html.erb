@@ -3,20 +3,21 @@
 <hr class="separator"></hr>
 
 <div class="header">
-    <div class="header_title">WALL</div>
-    <%= link_to new_post_path do %><div class="new_post_button">+</div><% end %>
+    <div class="header_title">Wall</div>
+    <%= link_to new_post_path do %><div class="new_post_button">New post</div><% end %>
 </div>
 
 <hr class="separator"></hr>
 
 
-    <% @posts.each do |post| %>
+    <% @posts.order('created_at DESC').each do |post| %>
 
         <div class="post_container">
             <div class="post_content">
 
                 <div class="post_title"><%= post.title %></div>
                 <div class="post_text"><%= post.text %></div>
+                <div class="post_date"><%= l post.created_at, format: :short %></div>
 
             </div>
 
@@ -29,5 +30,8 @@
             </div>
         </div>
 
+        <!--<hr class="separator"></hr>-->
 
     <% end %>
+
+<hr class="separator"></hr>
