@@ -46,7 +46,7 @@
     font-size: 60px;
     line-height: 60px;
     font-family: 'Rubik-Medium';
-    background-color: #000000;
+    background-color: #151717;
     color: #ecf0f1;
     width: 100%;
     padding: 20px 0px 20px;
@@ -91,15 +91,11 @@ a {
    //  /background-color: #ff00ff;
 }
 
-.post_content, .post_actions {
-    //display: inline-block;
-}
-
 .post_content {
 
     //position: relative;
     color: #ecf0f1;
-    background-color: #000000;//#2c3e50;
+    background-color: #151717;//#2c3e50;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -128,6 +124,7 @@ a {
     height: auto;
     width: auto;
     float: left;
+    color: #7f7f7f;
 }
 
 .post_text_form {
