@@ -2,16 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-@font-face{
+@font-face {
     font-family: 'HelveticaNeueCyr-Medium';
     src: font-url('HelveticaNeueCyr-Medium.otf') format('opentype');
     //font-weight: normal;
     //font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: 'HelveticaNeueCyr-Light';
     src: font-url('HelveticaNeueCyr-Light.otf') format('opentype');
     ///font-weight: normal;
@@ -33,6 +31,11 @@
     src: font-url('Rubik-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: '8_bit_operator_bold';
+    src: font-url('8_bit_operator_bold.ttf') format('truetype');
+}
+
 .header {
     min-width: 385px;
     max-width: 600px;
@@ -43,13 +46,13 @@
 
 .header_title {
     text-align: center;
-    font-size: 60px;
-    line-height: 60px;
-    font-family: 'Rubik-Medium';
+    font-size: 85px;
+    line-height: 100px;
+    font-family: '8_bit_operator_bold';
     background-color: #151717;
     color: #ecf0f1;
     width: 100%;
-    padding: 20px 0px 20px;
+    //padding: 20px 0px 20px;
 }
 
 .new_post_button {
@@ -57,9 +60,11 @@
     color: #2c3e50;
     background-color: #FDE3A7;
     width: 100%;
-    height: 60px;
-    line-height: 60px;
-    font-size: 45px;
+    height: 29px;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: 'Helvetica Neue','Circe',sans-serif;
+    font-weight: bold;
 }
 
 .new_post_button:hover {
@@ -94,7 +99,6 @@ a {
 .post_content {
 
     //position: relative;
-    color: #ecf0f1;
     background-color: #151717;//#2c3e50;
     width: 100%;
     height: auto;
@@ -103,16 +107,17 @@ a {
 
 }
 
-.post_title, .post_text {
+.post_title, .post_text, .post_date {
     text-align: left;
     padding: 5px 5px 4px;
 
 }
 
 .post_title { //.post_content
-
+    color: #ecf0f1;
     font-size: 25px;
-    font-family: "Rubik-Regular";
+    font-family: 'Helvetica Neue','Circe',sans-serif;
+    font-weight: bold;//"Rubik-Regular";
     width: 100%;
     height: auto;
     float: left;
@@ -120,19 +125,37 @@ a {
 
 .post_text {
     font-size: 17px;
-    font-family: "Rubik-Light";
+    font-family: 'Helvetica Neue','Circe',sans-serif;//"Rubik-Light";
     height: auto;
-    width: auto;
+    width: 98%;
     float: left;
-    color: #7f7f7f;
+    color: #bdc3c7;
+}
+
+.post_date {
+    font-size: 12px;
+    font-family: 'Helvetica Neue','Circe',sans-serif;//"Rubik-Light";
+    height: auto;
+    width: 100%;
+    float: left;
+    color: #999;
 }
 
 .post_text_form {
     font-size: 15px;
-    font-family: "Rubik-Light";
+    font-family: 'Helvetica Neue','Circe',sans-serif;//"Rubik-Light";
     height: auto;
+    width: 98%;
     margin: 5px 5px 5px;
     float: left;
+}
+
+.form_input_field {
+    width: 99.9%;
+}
+
+.form_input_area {
+    width: 100%;
 }
 
 .post_actions {
@@ -144,7 +167,8 @@ a {
 }
 
 .post_show, .post_edit, .post_delete {
-    font-family: "HelveticaNeueCyr-Medium";
+    font-family: 'Helvetica Neue','Circe',sans-serif;
+    font-weight: bold; //"HelveticaNeueCyr-Medium";
     font-size: 15px;
     text-align: center;
     color: #2c3e50;//#ecf0f1;//
