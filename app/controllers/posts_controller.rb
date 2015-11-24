@@ -2,6 +2,13 @@ class PostsController < ApplicationController
 
     def index
         @posts = Post.all
+
+        respond_to do |format|
+            format.html
+            format.json { render :json => @posts }
+            format.xml { render :xml => @posts }
+        end
+
     end
 
     def new
@@ -10,6 +17,11 @@ class PostsController < ApplicationController
 
     def show
         @post = Post.find(params[:id])
+        respond_to do |format|
+            format.html
+            format.json { render :json => @post }
+            format.xml { render :xml => @post }
+        end
     end
 
     def edit
