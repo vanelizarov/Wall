@@ -6,7 +6,7 @@
 <div class="post_container">
       <div class="post_content">
             <div class="post_text"><%= @post.text %></div>
-            <div class="post_date"><%= @post.created_at, format: :short %></div>
+            <div class="post_date"><%= l @post.created_at, format: :short %></div>
       </div>
       <div class="post_actions">
           <%= link_to edit_post_path(@post) do %><div class="post_edit">Edit</div><% end %>
