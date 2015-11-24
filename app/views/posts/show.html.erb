@@ -10,6 +10,6 @@
       <div class="post_actions">
           <%= link_to edit_post_path(@post) do %><div class="post_edit">Edit</div><% end %>
           <%= link_to posts_path do %><div class="post_edit">Go to Wall</div><% end %>
-          <%= link_to post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } do %><div class="post_delete">Del.</div><% end %>
+          <%= link_to post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } do %><div class="post_delete">Delete</div><% end %>
       </div>
 </div>

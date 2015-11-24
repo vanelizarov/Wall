@@ -9,14 +9,14 @@
 
 <hr class="separator"></hr>
 
-<!--<table>-->
+
     <% @posts.each do |post| %>
-        <!--<tr>-->
+
         <div class="post_container">
             <div class="post_content">
 
-                <div class="post_title"><%= post.title %></div> <!-- class="post_content"-->
-                <div class="post_text"><%= post.text %></div> <!-- class="post_content"-->
+                <div class="post_title"><%= post.title %></div>
+                <div class="post_text"><%= post.text %></div>
 
             </div>
 
@@ -30,8 +30,4 @@
         </div>
 
 
-        <!--</tr>-->
     <% end %>
-<!--</table>-->
-
-<!--<%= link_to 'Back', posts_path %>-->
